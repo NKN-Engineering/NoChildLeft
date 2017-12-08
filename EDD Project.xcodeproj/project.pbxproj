@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B10E0A41FD7875C0052C747 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 9B10E0A31FD7875C0052C747 /* Stickers.xcstickers */; };
+		9B10E0AF1FD857DA0052C747 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10E0AE1FD857DA0052C747 /* ShadowView.swift */; };
+		9B10E0B11FD99CB20052C747 /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10E0B01FD99CB20052C747 /* UNService.swift */; };
 		9BF0EBAC1FD062A500ABC1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0EBAB1FD062A500ABC1AA /* AppDelegate.swift */; };
 		9BF0EBAE1FD062A500ABC1AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0EBAD1FD062A500ABC1AA /* ViewController.swift */; };
 		9BF0EBB11FD062A600ABC1AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0EBAF1FD062A600ABC1AA /* Main.storyboard */; };
@@ -15,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B10E0A31FD7875C0052C747 /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; path = Stickers.xcstickers; sourceTree = "<group>"; };
+		9B10E0A51FD78CA60052C747 /* AlertPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = AlertPayload.apns; sourceTree = "<group>"; };
+		9B10E0AC1FD856210052C747 /* Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Logo.jpg; sourceTree = "<group>"; };
+		9B10E0AE1FD857DA0052C747 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		9B10E0B01FD99CB20052C747 /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 		9BF0EBA81FD062A500ABC1AA /* EDD Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EDD Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF0EBAB1FD062A500ABC1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF0EBAD1FD062A500ABC1AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,7 @@
 		9BF0EBB21FD062A600ABC1AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BF0EBB51FD062A600ABC1AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BF0EBB71FD062A600ABC1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BF0EBC01FD069A900ABC1AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B10E0A81FD854BF0052C747 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B10E0AC1FD856210052C747 /* Logo.jpg */,
+				9BF0EBB21FD062A600ABC1AA /* Assets.xcassets */,
+				9B10E0A31FD7875C0052C747 /* Stickers.xcstickers */,
+				9BF0EBAF1FD062A600ABC1AA /* Main.storyboard */,
+				9BF0EBB41FD062A600ABC1AA /* LaunchScreen.storyboard */,
+				9B10E0AE1FD857DA0052C747 /* ShadowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B10E0A91FD854F20052C747 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9BF0EBB71FD062A600ABC1AA /* Info.plist */,
+				9B10E0B01FD99CB20052C747 /* UNService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9B10E0AA1FD855000052C747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B10E0AB1FD8554B0052C747 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BF0EBAB1FD062A500ABC1AA /* AppDelegate.swift */,
+				9BF0EBAD1FD062A500ABC1AA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9BF0EB9F1FD062A500ABC1AA = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +101,11 @@
 		9BF0EBAA1FD062A500ABC1AA /* EDD Project */ = {
 			isa = PBXGroup;
 			children = (
-				9BF0EBAB1FD062A500ABC1AA /* AppDelegate.swift */,
-				9BF0EBAD1FD062A500ABC1AA /* ViewController.swift */,
-				9BF0EBAF1FD062A600ABC1AA /* Main.storyboard */,
-				9BF0EBB21FD062A600ABC1AA /* Assets.xcassets */,
-				9BF0EBB41FD062A600ABC1AA /* LaunchScreen.storyboard */,
-				9BF0EBB71FD062A600ABC1AA /* Info.plist */,
+				9B10E0AB1FD8554B0052C747 /* Controller */,
+				9B10E0AA1FD855000052C747 /* Model */,
+				9B10E0A91FD854F20052C747 /* Service */,
+				9B10E0A81FD854BF0052C747 /* View */,
+				9B10E0A51FD78CA60052C747 /* AlertPayload.apns */,
 			);
 			path = "EDD Project";
 			sourceTree = "<group>";
@@ -125,6 +171,7 @@
 			files = (
 				9BF0EBB61FD062A600ABC1AA /* LaunchScreen.storyboard in Resources */,
 				9BF0EBB31FD062A600ABC1AA /* Assets.xcassets in Resources */,
+				9B10E0A41FD7875C0052C747 /* Stickers.xcstickers in Resources */,
 				9BF0EBB11FD062A600ABC1AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B10E0AF1FD857DA0052C747 /* ShadowView.swift in Sources */,
 				9BF0EBAE1FD062A500ABC1AA /* ViewController.swift in Sources */,
 				9BF0EBAC1FD062A500ABC1AA /* AppDelegate.swift in Sources */,
+				9B10E0B11FD99CB20052C747 /* UNService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +197,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9BF0EBB01FD062A600ABC1AA /* Base */,
+				9BF0EBC01FD069A900ABC1AA /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -275,7 +325,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "EDD Project/Info.plist";
+				DEVELOPMENT_TEAM = 3C363JS7CW;
+				INFOPLIST_FILE = "$(SRCROOT)/EDD Project/Service/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NKNEngineering.EDD-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +341,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "EDD Project/Info.plist";
+				DEVELOPMENT_TEAM = 3C363JS7CW;
+				INFOPLIST_FILE = "$(SRCROOT)/EDD Project/Service/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NKNEngineering.EDD-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
