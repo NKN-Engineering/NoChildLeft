@@ -15,6 +15,7 @@
 		9B407FB0200EEE110018814F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B407FA3200EEDCB0018814F /* SQLite.framework */; };
 		9B407FB1200EEE220018814F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B407FA3200EEDCB0018814F /* SQLite.framework */; };
 		9B407FB2200EEE220018814F /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B407FA3200EEDCB0018814F /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B407FB7201250DA0018814F /* Objective-CBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B407FB6201250DA0018814F /* Objective-CBridgingHeader.m */; };
 		9BF0EBAC1FD062A500ABC1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0EBAB1FD062A500ABC1AA /* AppDelegate.swift */; };
 		9BF0EBAE1FD062A500ABC1AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0EBAD1FD062A500ABC1AA /* ViewController.swift */; };
 		9BF0EBB11FD062A600ABC1AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0EBAF1FD062A600ABC1AA /* Main.storyboard */; };
@@ -104,6 +105,9 @@
 		9B3E64221FE1F5E700BD0AE4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		9B3E64241FE1F5E700BD0AE4 /* EDD Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EDD Project.entitlements"; sourceTree = "<group>"; };
 		9B407F98200EEDCA0018814F /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		9B407FB5201250D90018814F /* EDD Project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EDD Project-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B407FB6201250DA0018814F /* Objective-CBridgingHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Objective-CBridgingHeader.m"; sourceTree = "<group>"; };
+		9B407FB8201252260018814F /* Objective-CBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-CBridgingHeader.h"; sourceTree = "<group>"; };
 		9BF0EBA81FD062A500ABC1AA /* EDD Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EDD Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF0EBAB1FD062A500ABC1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF0EBAD1FD062A500ABC1AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,9 @@
 			children = (
 				9BF0EBAB1FD062A500ABC1AA /* AppDelegate.swift */,
 				9BF0EBAD1FD062A500ABC1AA /* ViewController.swift */,
+				9B407FB6201250DA0018814F /* Objective-CBridgingHeader.m */,
+				9B407FB8201252260018814F /* Objective-CBridgingHeader.h */,
+				9B407FB5201250D90018814F /* EDD Project-Bridging-Header.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +268,7 @@
 				TargetAttributes = {
 					9BF0EBA71FD062A500ABC1AA = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.WAC = {
@@ -365,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B407FB7201250DA0018814F /* Objective-CBridgingHeader.m in Sources */,
 				9B31720B1FDC91B300D32B51 /* CallContacts.swift in Sources */,
 				9B10E0AF1FD857DA0052C747 /* ShadowView.swift in Sources */,
 				9BF0EBAE1FD062A500ABC1AA /* ViewController.swift in Sources */,
@@ -516,6 +525,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "EDD Project/EDD Project.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +546,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nknengineering.NoChildLeft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EDD Project/Controller/EDD Project-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,6 +558,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "EDD Project/EDD Project.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -566,6 +579,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nknengineering.NoChildLeft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EDD Project/Controller/EDD Project-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

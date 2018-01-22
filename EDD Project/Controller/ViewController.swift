@@ -10,13 +10,19 @@ import UIKit
 import SQLite3
 
 class ViewController: UIViewController {
-
+    var database: Connection!
+    
+    let usersTable = Table("users")
+    let id = Expression<Int>("id")
     override func viewDidLoad() {
         super.viewDidLoad()
         
         do {
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-            let fileUrl = documentDirectory.appendingPathComponent(user)
+            let fileUrl = documentDirectory.appendingPathComponent("user").appendingPathExtension("sqlite 3")
+            let database = try Connection(fileUrl.path)
+            self.database = database
+            
         } catch {
             print(error)
         }
@@ -29,6 +35,8 @@ class ViewController: UIViewController {
 
     @IBAction func createTable() {
         print("CREATE TAPPED")
+        
+        let createTable = self.
     }
 
     @IBAction func insertUser() {
